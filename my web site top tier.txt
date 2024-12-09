@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JR Repair Marketing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #FF8C00;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        header img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .hero {
+            background: url('A_modern_and_sleek_hero_banner_image_for_a_busines.png') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #FF8C00;
+        }
+        form input, form select, form textarea, form button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        form button {
+            background: #FF8C00;
+            color: #fff;
+            cursor: pointer;
+        }
+        form button:hover {
+            background: #FFA500;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="A_modern_and_sleek_hero_banner_image_for_a_busines.png" alt="JR Repair Marketing Logo">
+        <h1>JR Repair Marketing</h1>
+        <p>Innovative Repair & Marketing Solutions</p>
+    </header>
+
+    <div class="hero">
+        <h2>Fast & Reliable Business Growth Solutions</h2>
+    </div>
+
+    <div class="container">
+        <h3>Business Funding Application</h3>
+        <form id="fundingForm" action="process_form.php" method="POST" enctype="multipart/form-data">
+            <h4>Business Information</h4>
+            <input type="text" name="business_name" placeholder="Business Name" required>
+            <input type="text" name="business_address" placeholder="Business Address" required>
+            <input type="text" name="industry" placeholder="Industry" required>
+            <input type="number" name="monthly_revenue" placeholder="Monthly Revenue" required>
+
+            <h4>Funding Needs</h4>
+            <input type="number" name="funding_amount" placeholder="Amount of Funding Requested" required>
+            <select name="funding_purpose" required>
+                <option value="">Select Purpose</option>
+                <option value="Working Capital">Working Capital</option>
+                <option value="Equipment Purchase">Equipment Purchase</option>
+                <option value="Expansion">Expansion</option>
+                <option value="Debt Consolidation">Debt Consolidation</option>
+            </select>
+
+            <h4>Upload Documents (PDF Only)</h4>
+            <label for="bank_statements">Upload Bank Statements:</label>
+            <input type="file" name="bank_statements[]" id="bank_statements" multiple required>
+
+            <label for="tax_returns">Upload Tax Returns:</label>
+            <input type="file" name="tax_returns[]" id="tax_returns" multiple>
+
+            <h4>Authorization</h4>
+            <textarea name="authorization" placeholder="Enter your authorization details here" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 JR Repair Marketing. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
